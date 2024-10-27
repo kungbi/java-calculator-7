@@ -2,14 +2,14 @@ package calculator.operations;
 
 import calculator.exception.ExceptionUtils;
 import calculator.exception.IllegalArgumentExceptionEnum;
-import java.util.ArrayList;
+import java.util.List;
 
 public class SumCalculator {
     public SumCalculator() {
 
     }
 
-    public static int sum(ArrayList<Integer> numbers) {
+    public static int sum(List<Integer> numbers) {
         int sum = 0;
         for (int number : numbers) {
             try {

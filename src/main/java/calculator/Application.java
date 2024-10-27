@@ -3,7 +3,7 @@ package calculator;
 import calculator.operations.SumCalculator;
 import calculator.parser.InputParser;
 import camp.nextstep.edu.missionutils.Console;
-import java.util.ArrayList;
+import java.util.List;
 
 public class Application {
     public static void main(String[] args) {
@@ -11,7 +11,7 @@ public class Application {
 
         String input = Console.readLine();
         InputParser inputParser = new InputParser(",:", "//", "\\n");
-        ArrayList<Integer> numbers = inputParser.parse(input);
+        List<Integer> numbers = inputParser.parse(input);
         int sum = SumCalculator.sum(numbers);
         System.out.println("결과 : " + sum);
 

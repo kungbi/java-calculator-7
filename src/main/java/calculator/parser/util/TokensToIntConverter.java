@@ -7,10 +7,11 @@ import static calculator.exception.IllegalArgumentExceptionEnum.OUT_OF_RANGE;
 import calculator.exception.ExceptionUtils;
 import java.math.BigInteger;
 import java.util.ArrayList;
+import java.util.List;
 
 public class TokensToIntConverter {
 
-    public ArrayList<Integer> convertToInt(ArrayList<String> inputTokens) {
+    public ArrayList<Integer> convertToInt(List<String> inputTokens) {
         ArrayList<Integer> numbers = new ArrayList<>();
 
         for (String token : inputTokens) {
