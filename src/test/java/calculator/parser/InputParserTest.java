@@ -22,7 +22,7 @@ class InputParserTest {
     @Test
     @DisplayName("기본 구분자를 사용하여 입력 문자열 파싱 성공")
     void parseDefaultDelimiters() {
-        ArrayList<Integer> numbers = inputParser.parse("1,2,3");
+        List<Integer> numbers = inputParser.parse("1,2,3");
         ArrayList<Integer> expectedNumbers = new ArrayList<>(List.of(1, 2, 3));
 
         assertIterableEquals(expectedNumbers, numbers);
@@ -31,7 +31,7 @@ class InputParserTest {
     @Test
     @DisplayName("커스텀 구분자를 포함한 문자열 파싱 성공")
     void parseCustomDelimiter() {
-        ArrayList<Integer> numbers = inputParser.parse("//a\\n1,2a3");
+        List<Integer> numbers = inputParser.parse("//a\\n1,2a3");
         ArrayList<Integer> expectedNumbers = new ArrayList<>(List.of(1, 2, 3));
 
         assertIterableEquals(expectedNumbers, numbers);
@@ -67,7 +67,7 @@ class InputParserTest {
     @Test
     @DisplayName("다양한 커스텀 구분자를 사용하여 파싱 성공")
     void multipleCustomDelimiters() {
-        ArrayList<Integer> numbers = inputParser.parse("//a\\n1:2,3a4a5");
+        List<Integer> numbers = inputParser.parse("//a\\n1:2,3a4a5");
         ArrayList<Integer> expectedNumbers = new ArrayList<>(List.of(1, 2, 3, 4, 5));
 
         assertIterableEquals(expectedNumbers, numbers);
