@@ -10,6 +10,8 @@ public enum IllegalArgumentExceptionEnum {
     OUT_OF_RANGE("토큰의 크기가 표현 범위를 넘었습니다."),
 
     ADDITION_OVERFLOW("덧셈 결과가 표현 범위를 넘었습니다."),
+
+    NULL_INPUT("입력이 null입니다."),
     ;
 
     private final String message;
